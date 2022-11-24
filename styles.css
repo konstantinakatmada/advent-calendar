@@ -1,0 +1,71 @@
+body {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+.btn-start {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: #008000;
+    color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 15px auto;
+    display: block;
+    width: 11rem;
+    height: 3.5rem;
+}
+
+h1 {
+    margin: 30px auto;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 800px;
+    height: 900px;
+    border: 5px solid black;
+    margin: 15px auto;
+    background-image: url("pexels-valeria-boltneva.jpg");
+    background-size: cover;
+    box-shadow: 6px 6px 20px gray;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
+    grid-template-areas:
+        "day9 day6 day11 day7 day8"
+        "day3 day20 day16 day2 day18"
+        "day14 day12 day19 day15 day4"
+        "day22 day1 day5 day23 day13"
+        "day17 day10 day24 day21 day25";
+}
+
+.image {
+    background-image:url('./images/image5.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-area: day16;
+}
+
+.text {
+    height: 100%;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+    transition: opacity 2.5s;
+    font-size: 30px;
+}
