@@ -16,9 +16,9 @@ const createCalendar = () => {
         if (i === 15) {
             //κώδικας για εισαγωγή βίντεο
             const iframeElement = document.createElement('iframe');
-            iframeElement.width = "158";
-            iframeElement.height = "178";
-            iframeElement.src = "https://www.youtube.com/embed/npnp--SSx_8" 
+            iframeElement.width = "148";
+            iframeElement.height = "168";
+            iframeElement.src = "https://www.youtube.com/embed/npnp--SSx_8";
             iframeElement.title = "YouTube video player";
             iframeElement.frameborder = "0";
             iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
