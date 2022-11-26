@@ -5,7 +5,7 @@ body {
     font-variant: normal;
     font-weight: 700;
     line-height: 15.4px;
-    background-color: black;
+    background-color: #061e38;
 }
 
 .btn-start {
@@ -21,8 +21,8 @@ body {
     border-radius: 15px;
     margin: 15px auto;
     display: block;
-    width: 11rem;
-    height: 3.5rem;
+    width: 12rem;
+    height: 3.8rem;
 }
 
 h1 {
