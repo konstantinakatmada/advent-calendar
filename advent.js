@@ -92,6 +92,32 @@ const createCalendar = () => {
             });
 
         } 
+        else if (i === 8) {
+            const calendarDay = document.createElement("div");
+            const calendarDayText = document.createElement("div");
+            calendarDay.classList.add("image");
+            calendarDay.style.gridArea = "day" + (i + 1);
+            calendarContainer.appendChild(calendarDay);
+            calendarDayText.classList.add("text");
+            calendarDayText.innerHTML = i + 1;
+            calendarDay.appendChild(calendarDayText);
+
+            const iframeElement = document.createElement('iframe');
+            iframeElement.width = "238";
+            iframeElement.height = "218";
+            iframeElement.src = 'https://www.youtube.com/embed/f2UnLAU1x_I';
+            iframeElement.title = "YouTube video player";
+            iframeElement.frameborder = "0";
+            iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframeElement.allowfullscreen = true;
+            iframeElement.classList.add('video');
+
+
+
+            calendarDayText.addEventListener("click", (event) => {
+                event.target.parentNode.replaceChildren(iframeElement);
+            });
+        }
         else if (i === 11) {
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
@@ -185,7 +211,7 @@ const createCalendar = () => {
             const iframeElement = document.createElement('iframe');
             iframeElement.width = "238";
             iframeElement.height = "218";
-            iframeElement.src = "https://www.youtube.com/embed/f2UnLAU1x_I";
+            iframeElement.src = "https://www.youtube.com/embed/feYR2StoV3s";
             iframeElement.title = "YouTube video player";
             iframeElement.frameborder = "0";
             iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
