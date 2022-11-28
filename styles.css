@@ -8,6 +8,20 @@ body {
     background-color: #061e38;
 }
 
+label {
+    display: block;
+    margin: 0 auto;
+    font: 1rem 'Mountains of Christmas', cursive;
+    color: white;
+}
+
+input,
+label {
+    display: block;
+    margin: 0 auto;
+}
+
+
 .btn-start {
     font-family: 'Mountains of Christmas', cursive;
     font-size: 20px;
