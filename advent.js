@@ -14,6 +14,10 @@ const openDay = (path, event) => {
 const createCalendar = () => {
     for (let i = 0; i < calendarDays; i++) {
         if (i === 15) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-16') {
+                continue;
+            }
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
@@ -39,33 +43,41 @@ const createCalendar = () => {
                 event.target.parentNode.replaceChildren(iframeElement);
             });
         }
-           else if (i === 2) {
-                const calendarDay = document.createElement("div");
-                const calendarDayText = document.createElement("div");
-                calendarDay.classList.add("image");
-                calendarDay.style.gridArea = "day" + (i + 1);
-                calendarContainer.appendChild(calendarDay);
-                calendarDayText.classList.add("text");
-                calendarDayText.innerHTML = i + 1;
-                calendarDay.appendChild(calendarDayText);
-    
-                const iframeElement = document.createElement('iframe');
-                iframeElement.width = "238";
-                iframeElement.height = "218";
-                iframeElement.src = 'https://www.youtube.com/embed/-y6t1N8qTIU';
-                iframeElement.title = "YouTube video player";
-                iframeElement.frameborder = "0";
-                iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-                iframeElement.allowfullscreen = true;
-                iframeElement.classList.add('video');
-    
-    
-    
-                calendarDayText.addEventListener("click", (event) => {
-                    event.target.parentNode.replaceChildren(iframeElement);
-                });
+        else if (i === 2) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-03') {
+                continue;
             }
+            const calendarDay = document.createElement("div");
+            const calendarDayText = document.createElement("div");
+            calendarDay.classList.add("image");
+            calendarDay.style.gridArea = "day" + (i + 1);
+            calendarContainer.appendChild(calendarDay);
+            calendarDayText.classList.add("text");
+            calendarDayText.innerHTML = i + 1;
+            calendarDay.appendChild(calendarDayText);
+
+            const iframeElement = document.createElement('iframe');
+            iframeElement.width = "238";
+            iframeElement.height = "218";
+            iframeElement.src = 'https://www.youtube.com/embed/-y6t1N8qTIU';
+            iframeElement.title = "YouTube video player";
+            iframeElement.frameborder = "0";
+            iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframeElement.allowfullscreen = true;
+            iframeElement.classList.add('video');
+
+
+
+            calendarDayText.addEventListener("click", (event) => {
+                event.target.parentNode.replaceChildren(iframeElement);
+            });
+        }
         else if (i === 6) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-07') {
+                continue;
+            }
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
@@ -91,8 +103,13 @@ const createCalendar = () => {
                 event.target.parentNode.replaceChildren(iframeElement);
             });
 
-        } 
+        }
         else if (i === 8) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-09') {
+                continue;
+            }
+
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
@@ -119,6 +136,10 @@ const createCalendar = () => {
             });
         }
         else if (i === 11) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-12') {
+                continue;
+            }
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
@@ -144,8 +165,12 @@ const createCalendar = () => {
                 event.target.parentNode.replaceChildren(iframeElement);
             });
 
-        } 
+        }
         else if (i === 13) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-14') {
+                continue;
+            }
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
@@ -171,8 +196,12 @@ const createCalendar = () => {
                 event.target.parentNode.replaceChildren(iframeElement);
             });
 
-        } 
+        }
         else if (i === 21) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-22') {
+                continue;
+            }
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
@@ -199,6 +228,10 @@ const createCalendar = () => {
             });
         }
         else if (i === 24) {
+            const todayDate = document.getElementById('start').value;
+            if (todayDate < '2022-12-25') {
+                continue;
+            }
             const calendarDay = document.createElement("div");
             const calendarDayText = document.createElement("div");
             calendarDay.classList.add("image");
