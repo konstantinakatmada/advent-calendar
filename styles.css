@@ -11,14 +11,21 @@ body {
 label {
     display: block;
     margin: 0 auto;
-    font: 1rem 'Mountains of Christmas', cursive;
+    font:'Mountains of Christmas', cursive;
     color: white;
+    font-size: 15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input,
 label {
     display: block;
     margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
