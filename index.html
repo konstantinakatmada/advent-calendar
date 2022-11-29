@@ -13,13 +13,32 @@
     <title>Advent Calendar</title>
     
 </head>
+<script type="text/javascript">
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+       document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+      document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+      document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+    }
+ </script>
+
+<script>
+  if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+     jQuery(function($){ //on document.ready
+         $('input[type=date]').datepicker({
+                dateFormat : 'yy-mm-dd'
+              });
+     })
+  }
+</script>
 
 <body>
     <h1>A Musical Christmas Advent</h1>
     <label for="start">Today's date:</label>
 
 <input type="date" id="start" name="trip-start"
-       value="2022-12-25"
+       value="2022-12-01"
        min="2022-12-01"
        max="2022-12-25">
     <button class="btn-start">Click to Reveal the Magic of Christmas!</button>
