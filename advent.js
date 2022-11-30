@@ -2,7 +2,7 @@ const calendarButton = document.querySelector(".btn-start");
 const calendarContainer = document.querySelector(".container");
 const calendarDays = 25;
 
-const doorsOpened = []
+const doorsOpened = JSON.parse(localStorage.getItem("doorsOpened")) || []
 
 const setVideo = (i, youtubeURL, isAfterToday) => {
     const calendarDay = document.createElement("div");
@@ -22,6 +22,11 @@ const setVideo = (i, youtubeURL, isAfterToday) => {
     iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
     iframeElement.allowfullscreen = true;
     iframeElement.classList.add('video');
+
+    if (doorsOpened.includes(i)) {
+        calendarDayText.parentNode.replaceChildren(iframeElement);
+    }
+
     if (!isAfterToday) {
         calendarDayText.addEventListener("click", (event) => {
             doorsOpened.push(i)
@@ -70,13 +75,20 @@ const createCalendar = () => {
             calendarDay.appendChild(calendarDayText);
             const imageNumber = i + 1;
             const imagePath = `./images/image${imageNumber}.jpg`;
+
+            const openDoor = (element) => {
+                element.parentNode.style.backgroundImage = `url(${imagePath})`;
+                element.style.opacity = "0";
+                element.style.backgroundColor = "#521751";
+            }
+            if (doorsOpened.includes(i)) {
+                openDoor(calendarDayText)
+            }
             if (!isAfterToday) {
                 calendarDayText.addEventListener("click", (event) => {
                     doorsOpened.push(i)
                     localStorage.setItem('doorsOpened', JSON.stringify(doorsOpened))
-                    event.target.parentNode.style.backgroundImage = `url(${imagePath})`;
-                    event.target.style.opacity = "0";
-                    event.target.style.backgroundColor = "#521751";
+                    openDoor(event.target)
                 }
                 );
             }
@@ -85,3 +97,5 @@ const createCalendar = () => {
 }
 
 calendarButton.addEventListener("click", createCalendar);
+
+
